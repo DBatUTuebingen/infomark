@@ -25,8 +25,8 @@ Geschwister-Scholl-Platz
 72074 Tübingen
 E-Mail: datenschutz@uni-tuebingen.de
 Telefon: +49 70 71 29-0
-[Website des Datenschutzbeauftragten](https://uni-tuebingen.de/einrichtungen/personalvertretungen-beratung-beauftragte/datenschutzbeauftragter/)
 ```
+[Website des Datenschutzbeauftragten](https://uni-tuebingen.de/einrichtungen/personalvertretungen-beratung-beauftragte/datenschutzbeauftragter/)
 
 
 ## Umfang der Datenerhebung, -verarbeitung und -nutzung
