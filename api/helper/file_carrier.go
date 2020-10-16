@@ -129,7 +129,7 @@ func NewSubmissionFileHandle(ID int64) *FileHandle {
 	return &FileHandle{
 		Category:   SubmissionCategory,
 		ID:         ID,
-		Extensions: []string{"zip"},
+		Extensions: []string{"rkt"},
 		MaxBytes:   configuration.Configuration.Server.HTTP.Limits.MaxSubmission,
 	}
 }
@@ -197,7 +197,7 @@ func (f *FileHandle) Path() string {
 		return ""
 
 	case SubmissionCategory:
-		return fmt.Sprintf("%s/submissions/%d.zip", configuration.Configuration.Server.Paths.Uploads, f.ID)
+		return fmt.Sprintf("%s/submissions/%d.rkt", configuration.Configuration.Server.Paths.Uploads, f.ID)
 	case SubmissionsCollectionCategory:
 		return fmt.Sprintf("%s/collection-course%d-sheet%d-task%d-group%d.zip",
 			configuration.Configuration.Server.Paths.GeneratedFiles, f.Infos[0], f.Infos[1], f.Infos[2], f.Infos[3])
@@ -423,9 +423,9 @@ func (f *FileHandle) WriteToDisk(r *http.Request, fieldName string) (string, err
 		PublicTestCategory,
 		PrivateTestCategory,
 		SubmissionCategory:
-		if !IsZipFile(fileMagic) {
-			return "", errors.New("We support ZIP files only. But the given file is no Zip file")
-		}
+		// if !IsZipFile(fileMagic) {
+		// 	return "", errors.New("We support ZIP files only. But the given file is no Zip file")
+		// }
 	case MaterialCategory:
 		// delete both possible files
 		// ids are unique. Hence we only delete the file associated with the id
